@@ -25,3 +25,11 @@ exports.div = function div(num1, num2){
     return num1 / num2;
 }
 
+// module for the setttimeout devloper made
+
+exports.settimeout = function(ms){
+    let date = new Date();
+    while((new Date() - date)<=ms){
+
+    }
+}
