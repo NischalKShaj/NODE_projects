@@ -2,13 +2,13 @@
 
 // importing modules.....
 const calc = require('./modules')
-
+const advcalc = require('./advcalcmod')
 // module for taking the user input...
 const scanner = require('prompt-sync')
 const prompt = scanner();
 
 
-console.log("Enter your choice \n1.Addition \n2.Subtraction \n3.Multiply \n4.Division");
+console.log("Enter your choice \n1.Addition \n2.Subtraction \n3.Multiply \n4.Division \n5.Power");
 let choice = Number(prompt(""))
 
 let num1 = Number(prompt("Enter the first number : "))
@@ -36,10 +36,16 @@ switch(choice){
         break;
 
     //switch condition for division
-    case 3:
+    case 4:
         result = calc.div(num1, num2);
         console.log(`The quotient of ${num1} and ${num2} is : ${result}`);
         break
+
+    // switch condition for power
+    case 5:
+        result = advcalc.power(num1, num2);
+        console.log(`The power of ${num1} raised to ${num2} is : ${result}`);
+        break;
 
     // default block
     default:
